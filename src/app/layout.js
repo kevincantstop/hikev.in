@@ -2,7 +2,7 @@ import './globals.css'
 
 export const metadata = {
   title: `Kevin Yang's Profile`,
-  description: `Kevin Yang is full stack developer, he is in the industry for more than 10 years now. And feel free to get in touch with him.`,
+  description: `Kevin Yang is a full stack developer, he is in the industry for more than 10 years now. And feel free to get in touch with him.`,
 }
 
 export default function RootLayout({ children }) {
