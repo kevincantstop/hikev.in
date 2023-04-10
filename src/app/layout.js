@@ -1,4 +1,5 @@
 import './globals.css'
+import Script from 'next/script'
 
 export const metadata = {
   title: `Kevin Yang's Profile`,
@@ -14,6 +15,16 @@ export default function RootLayout({ children }) {
               crossOrigin="anonymous" referrerPolicy="no-referrer" />
       </head>
       <body>{children}</body>
+      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-BRBWV4F70S" />
+      <Script id="google-analytics" strategy="afterInteractive" dangerouslySetInnerHTML={{
+          __html:`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-BRBWV4F70S');
+          `
+      }} />
     </html>
   )
 }
